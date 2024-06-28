@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk Tolerance Predictor</title>
+</head>
+<body>
+    <h1>Risk Tolerance Predictor</h1>
+    <form action="/predict" method="post">
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required><br>
+
+        <label for="education_level">Education Level:</label>
+        <input type="text" id="education_level" name="education_level" required><br>
+
+        <label for="married_state">Married State:</label>
+        <input type="text" id="married_state" name="married_state" required><br>
+
+        <label for="no_of_kids">Number of Kids:</label>
+        <input type="text" id="no_of_kids" name="no_of_kids" required><br>
+
+        <label for="life_statge">Life Stage:</label>
+        <input type="text" id="life_statge" name="life_statge" required><br>
+
+        <label for="occupational_category">Occupational Category:</label>
+        <input type="text" id="occupational_category" name="occupational_category" required><br>
+
+        <label for="income">Income:</label>
+        <input type="text" id="income" name="income" required><br>
+
+        <label for="risk">Risk:</label>
+        <input type="text" id="risk" name="risk" required><br>
+
+        <label for="eager">Eager:</label>
+        <input type="text" id="eager" name="eager" required><br>
+
+        <button type="submit">Predict</button>
+    </form>
+    <h2>{{ prediction_text }}</h2>
+</body>
+</html>
