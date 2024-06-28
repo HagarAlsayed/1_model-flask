@@ -28,7 +28,7 @@ feature_names = [
 
 @app.route('/')
 def home():
-    return #render_template("index.html")
+    return render_template("index.html")
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -44,7 +44,7 @@ def predict():
     except Exception as e:
         return jsonify({'error': str(e)})
 
-@app.route('/api/predict', methods=['GET'])
+@app.route('/api/predict', methods=['GET','POST'])
 def api_predict():
     try:
         # Extract features from JSON request
